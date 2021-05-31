@@ -55,3 +55,28 @@ fun5(5,5)(2)
 //Outra forma, armazena a funçao de retorno em uma constante, e depois usa a função armazenada a partir da constante
 const res = fun5(5,5)
 res(3)
+
+
+const funcArray = [(a, b) => console.log(a + b)];
+ 
+/**
+ * 
+ * @param {*} fun 
+ * @param  {...any} params 
+ *
+ * Outro jeito de passar a função armazenada em um array
+ * nessa caso a função recebe parametros
+ * então é usado ...params para ser passado qualquer quantiade de parametros
+ * é ai verifica se a função passada recebe ou não parametros.
+ * */
+function fun4(fun, ...params) {
+  if (params) fun(...params)
+  else fun();
+}
+ 
+fun4(function () {
+  console.log('Executando função 4');
+});
+ 
+fun4(funcArray[0], 3, 2);
+
