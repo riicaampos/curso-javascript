@@ -10,7 +10,7 @@ dobro = (a) =>{
  * a é o parametro
  */
 dobro = a => 2*a
-dobro = _ => 2*a
+dobro = _ => 2*_
 
 console.log(dobro(2))
 
